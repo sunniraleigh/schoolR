@@ -117,7 +117,8 @@ graph_my_data.numeric <- function(x, y, color, ind_var, dep_var, title, data = N
 
 }
 
-
+#' @export
+#' @rdname graph_my_data
 graph_my_data.data.frame <- function(data, color, ind_var, dep_var, title, x = NULL, y = NULL) {
 
   x <- data[, ind_var]
