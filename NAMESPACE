@@ -2,6 +2,7 @@
 
 S3method(graph_my_data,data.frame)
 S3method(graph_my_data,numeric)
+export(generate_problems)
 export(graph_my_data)
 import(ggplot2)
 import(ggthemes)
