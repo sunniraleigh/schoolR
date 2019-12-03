@@ -5,15 +5,19 @@
 #' @param ind_var a string of the variable name to be assessed; if using `data`, the vector of this variable name must have numerical values
 #' @param dep_var a string of the variable name to be assessed; if using `data`, the vector of this variable name must have numerical values
 #' @param title a string
-#' @param data
-#' @exporta data frame; default value is NULL, so that if manually entering data as x and y vectors this is not involved
-graph_my_data <- function(x, y, color, ind_var, dep_var, title, data = NULL){
+#' @param data default value is NULL, so that if manually entering data as x and y vectors this is not involved
+#' @export
+graph_my_data <- function(x, y, color, ind_var, dep_var, title, data){
   UseMethod("graph_my_data")
 }
 
 
 #' @export
 #' @rdname graph_my_data
+#' @import ggplot2
+#' @import ggthemes
+#' @importFrom stats coefficients cor lm median predict resid
+#' @import gridExtra
 graph_my_data.numeric <- function(x, y, color, ind_var, dep_var, title, data = NULL) {
 
   # plot scatterplot between x and y to check for linearity
@@ -120,7 +124,11 @@ graph_my_data.numeric <- function(x, y, color, ind_var, dep_var, title, data = N
 
 #' @export
 #' @rdname graph_my_data
-graph_my_data.data.frame <- function(data, color, ind_var, dep_var, title, x = NULL, y = NULL) {
+#' @import ggplot2
+#' @import ggthemes
+#' @import gridExtra
+#' @importFrom stats coefficients cor lm median predict resid
+graph_my_data.data.frame <- function(x = NULL, y = NULL, color, ind_var, dep_var, title, data) {
 
   x <- data[, ind_var]
   y <- data[, dep_var]

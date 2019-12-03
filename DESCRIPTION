@@ -1,17 +1,32 @@
 Package: schoolR
-Title: What the Package Does (One Line, Title Case)
+Title: Aids Students And Teachers In Learning And Teaching Data Science 
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    c(person(given = "Sunni",
+           family = "Raleigh",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           email = "sraleigh@smith.edu",
+           comment = c(ORCID = "YOUR-ORCID-ID")),
+           person(given = "Natalia",
+            family = "Iannucci",
+            role = c("aut"),
+            email = "niannucci@smith.edu",
+            comment =  c(ORCID = "YOUR-ORCID-ID")),
+          person(given = "Isabel",
+            family = "Gomez",
+            role = c("aut"),
+            email = "",
+            comment =  c(ORCID = "YOUR-ORCID-ID")))
 Description: What the package does (one paragraph).
 License: GPL-3
 Suggests: 
-    testthat
+    testthat (>= 2.1.0)
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.0.0
+Imports:
+    ggplot2,
+    ggthemes,
+    gridExtra,
+    stats
