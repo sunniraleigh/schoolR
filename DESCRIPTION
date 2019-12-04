@@ -15,7 +15,7 @@ Authors@R:
           person(given = "Isabel",
             family = "Gomez",
             role = c("aut"),
-            email = "",
+            email = "igomez@smith.edu",
             comment =  c(ORCID = "YOUR-ORCID-ID")))
 Description: The schoolR package provides a simple and accessible approach for elementary through high school students and their educators to engage in R and solidify their understanding of mathematucal concepts.
   It provides functions to help them learn how to compute the area and perimeter of different shapes and visualize data, including that which they gather themselves. 
