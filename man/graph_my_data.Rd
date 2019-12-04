@@ -8,11 +8,9 @@
 \usage{
 graph_my_data(x, y, color, ind_var, dep_var, title, data)
 
-\method{graph_my_data}{numeric}(x, y, color, ind_var, dep_var, title,
-  data = NULL)
+\method{graph_my_data}{numeric}(x, y, color, ind_var, dep_var, title, data = NULL)
 
-\method{graph_my_data}{data.frame}(x = NULL, y = NULL, color, ind_var,
-  dep_var, title, data)
+\method{graph_my_data}{data.frame}(x = NULL, y = NULL, color, ind_var, dep_var, title, data)
 }
 \arguments{
 \item{x}{a numeric vector}

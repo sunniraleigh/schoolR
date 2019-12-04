@@ -4,11 +4,25 @@
 \alias{circle}
 \title{graphs and calculates area and perimeter of a circle}
 \usage{
-circle(x)
+circle(r)
 }
 \arguments{
-\item{x}{a numeric vector containing positive value(s)}
+\item{r}{a numeric vector containing positive value(s)}
+}
+\value{
+A dataframe containing the radius,
+diameter, perimeter and area and a graph of circle with radius \code{r}
 }
 \description{
 graphs and calculates area and perimeter of a circle
+}
+\examples{
+circle(3)
+
+# You can pass a vector and it will return the result for all numbers in that vector
+circle(2:6)
+
+# You can use a predefined vector
+r <- c(1,7)
+circle(r)
 }
