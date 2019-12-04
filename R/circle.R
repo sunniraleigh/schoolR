@@ -1,31 +1,42 @@
 #' graphs and calculates area and perimeter of a circle
-#' @param x a numeric vector containing positive value(s)
+#' @param r a numeric vector containing positive value(s)
+#' @return A dataframe containing the radius,
+#' diameter, perimeter and area and a graph of circle with radius \code{r}
+#' @examples
+#' circle(3)
+#'
+#' # You can pass a vector and it will return the result for all numbers in that vector
+#' circle(2:6)
+#'
+#' # You can use a predefined vector
+#' r <- c(1,7)
+#' circle(r)
 #' @export
-circle <- function(x){
-  df <- data.frame(x)
+circle <- function(r){
+  df <- data.frame(r)
   suppressWarnings(
-    if (x < 0) {
+    if (r < 0) {
       stop("x must be a positive number")
     } else {
       # create math
       df <- df %>%
         mutate(
-          diameter = 2*x,
+          diameter = 2*r,
           perimeter = pi*diameter,
-          area = pi*(x)^2
+          area = pi*(r)^2
         )
 
       #reverse dataframe for plotting circles
-      df1 <- df[order(-x),]
+      df1 <- df[order(-r),]
 
       #make circles
       plot <- ggplot() +
-        geom_circle(aes(x0 = 0, y0 = 0, r = x, fill = x), data = df1) +
+        ggforce::geom_circle(aes(x0 = 0, y0 = 0, r = r, fill = r), data = df1) +
         coord_fixed() +
         geom_hline(yintercept = 0) +
         geom_vline(xintercept = 0) +
-        geom_point(data = df1, aes(x = x, y = 0, color = "red")) + #points corresponding to the radius
-        geom_label(data = df1, aes(x = x - .5, y = .5, label = paste("r =", x))) +
+        geom_point(data = df1, aes(x = r, y = 0, color = "red")) + #points corresponding to the radius
+        geom_label(data = df1, aes(x = r - .5, y = .5, label = paste("r =", r))) +
         guides(fill = guide_legend("Radius"), color = FALSE) + #deletes legend created by color
         labs(title = "Area of circle(s)")
 
