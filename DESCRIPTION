@@ -34,9 +34,11 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.0.0
 Imports:
+    dplyr,
+    ggplot2,
     ggforce,
     ggthemes,
     gridExtra,
     stats,
-    tidyverse
+    tidyr
 VignetteBuilder: knitr

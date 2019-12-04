@@ -11,6 +11,10 @@
 #' # You can use a predefined vector
 #' r <- c(1,7)
 #' circle(r)
+#' @importFrom tidyr %>%
+#' @importFrom ggforce geom_circle
+#' @import ggplot2
+#' @importFrom dplyr mutate
 #' @export
 circle <- function(r){
   df <- data.frame(r)
@@ -22,7 +26,7 @@ circle <- function(r){
       df <- df %>%
         mutate(
           diameter = 2*r,
-          perimeter = pi*diameter,
+          perimeter = 2*pi*r,
           area = pi*(r)^2
         )
 
@@ -31,7 +35,7 @@ circle <- function(r){
 
       #make circles
       plot <- ggplot() +
-        ggforce::geom_circle(aes(x0 = 0, y0 = 0, r = r, fill = r), data = df1) +
+        geom_circle(aes(x0 = 0, y0 = 0, r = r, fill = r), data = df1) +
         coord_fixed() +
         geom_hline(yintercept = 0) +
         geom_vline(xintercept = 0) +
