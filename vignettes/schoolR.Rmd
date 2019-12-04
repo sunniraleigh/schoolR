@@ -17,3 +17,57 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(schoolR)
 ```
+
+Coding is being introduced to students at younger and younger ages. With the schoolR package, teachers and students can use coding as a tool to help learn an teach mathematical concepts. 
+
+SchoolR helps teachers:
+
+  * visually explain shapes and areas to younger children
+  
+  * explain trends in data visually through graphing
+  
+  * explain how to interpret simple linear regression diagnostics
+  
+  * generate large numbers of practice problems for students with the corect answers for students to check their work
+  
+SchoolR helps students:
+  
+  * see how different shapes create different areas
+  
+  * accurately graph their data to better understand trends
+  
+  * practice their math skills
+  
+This document provides an introduction to schoolR's functions with examples to show teachers how to use them while teaching to improve their student's learning and comprehension of mathematical concepts. It includes different examples and applications for different age/skill levels.
+
+## Drawing Shapes
+
+## Graphing with `graph_my_data`
+`graph_my_data` allows students and teachers to produce high-quality graphs of data that they obtain, or of data from `data.frame`s. It outputs basic simple linear regression diagnostics such as r, means, and medians, and interprets the r value. 
+
+For younger students, teachers and/or students can create simple vectors of data, creating a vector `x` of points to plot on the x-axis and a vector `y` of points to plot on the y-axis. `graph_my_data` will automatically graph their points, allowing them to understand how graphing and relationships between variables work.
+```{r}
+x <- c(1, 3, 4, 6, 2)
+y <- c(2, 7, 7, 11, 4)
+graph_my_data(x, y, "blue", "height", "weight", "my graph!")
+```
+
+For older students, they could use the previous technique of creating vectors for data that they might be actually collecting, as students in middle school may be performing small science experiments and collecting data, and use `graph_my_data` to understand what their data actually means. They could also use `data.frame`s to be able to use larger sets of data and try looking at relationships between different variabels to understand and interpret trends.
+```{r}
+graph_my_data(data = mtcars, color = "blue", ind_var = "mpg", dep_var = "disp", title = "mtcars data")$r_df
+```
+
+
+## Producing Practice Problems with `generate_problems`
+
+`generate_problems` allows educators to produce sets of practice questions for students based on what they would like them to work on. Teachers can specify the upper and lower bounds of the numbers being chosen from to use in the equation, what operation to use, and how many problems to produce.
+
+For a younger student learning basic arithmetic, a teacher can ensure that the numbers are not out of the students' range of what they can do:
+```{r}
+generate_problems("add", 1, 10, 5)
+```
+
+For older students such as those in middle school who are pracitcing multiplication tables, a teacher can easily produce more advanced multiplication problems:
+```{r}
+generate_problems("multiply", 5, 15, 10)
+```
