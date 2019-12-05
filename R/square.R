@@ -1,14 +1,13 @@
 #' graphs and calculates the area and perimeter of a square
 #' @param x a numeric vector containing a positive integer
 #' @return a dataframe containining the length, width, area, perimeter,
-#' and a graph of the square with length and width \code {x}
+#' and a graph of the square with length and width \code{x}
 #' @examples
 #' square(3)
 #' square (2:4)
 #' @import ggplot2
-
-
-
+#' @import tibble
+#' @export
 square <- function(x) {
   #tibble containing information
   math <- tibble::tibble(
@@ -40,5 +39,6 @@ square <- function(x) {
 
   #Print table
   return(math)
+  return(coords)
 
 }

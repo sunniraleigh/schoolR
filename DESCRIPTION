@@ -40,5 +40,6 @@ Imports:
     ggthemes,
     gridExtra,
     stats,
-    tidyr
+    tidyr,
+    tibble
 VignetteBuilder: knitr

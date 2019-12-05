@@ -11,7 +11,7 @@ square(x)
 }
 \value{
 a dataframe containining the length, width, area, perimeter,
-and a graph of the square with length and width \code {x}
+and a graph of the square with length and width \code{x}
 }
 \description{
 graphs and calculates the area and perimeter of a square
