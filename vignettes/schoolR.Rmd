@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 library(schoolR)
 ```
 
-Coding is being introduced to students at younger and younger ages. With the schoolR package, teachers and students can use coding as a tool to help learn an teach mathematical concepts. 
+Coding is being introduced to students at younger and younger ages. With the schoolR package, teachers and students can use coding as a tool to help learn and teach mathematical concepts. 
 
 SchoolR helps teachers:
 
@@ -71,3 +71,7 @@ For older students such as those in middle school who are pracitcing multiplicat
 ```{r}
 generate_problems("multiply", 5, 15, 10)
 ```
+
+##Drawing squares with `square` 
+
+`square` allows students to input a desired side length and produces the respective square visualization along with accurate calculations for the perimeter and area of the square. Students and/or teachers can also specify a vector of square lengths. 
