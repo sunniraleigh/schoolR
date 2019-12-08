@@ -39,6 +39,5 @@ square <- function(x) {
 
   #Print table
   return(math)
-  return(coords)
 
 }
