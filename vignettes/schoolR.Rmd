@@ -75,3 +75,7 @@ generate_problems("multiply", 5, 15, 10)
 ##Drawing squares with `square` 
 
 `square` allows students to input a desired side length and produces the respective square visualization along with accurate calculations for the perimeter and area of the square. Students and/or teachers can also specify a vector of square lengths. 
+```{r}
+square(2:3)
+```
+
