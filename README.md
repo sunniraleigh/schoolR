@@ -47,12 +47,15 @@ x <- c(1, 3, 4, 6, 2)
 y <- c(2, 7, 7, 11, 4)
 graph_my_data(x, y, "blue", "number of students called in sick", "total number of absences", "kids out of school on a certain day")
 ```
+![Graphs Produced](https://raw.githubusercontent.com/sunniraleigh/schoolR/master/pictures/output2.png?token=ALJUNZC4QKS6ZIIBHOX3H3C55Z7WW)
+![simple linear regression diagnostics](https://raw.githubusercontent.com/sunniraleigh/schoolR/master/pictures/output1.png?token=ALJUNZAQXUIECH673QIWDW255Z7UY)
 
 ### Producing Practice Problems with `generate_problems`
 `generate_problems` allows educators to produce sets of practice questions for students based on what they would like them to work on. Teachers can specify the upper and lower bounds of the numbers being chosen from to use in the equation, what operation to use, and how many problems to produce.
 ```
 generate_problems("multiply", 5, 15, 10)
 ```
+![Problems](https://raw.githubusercontent.com/sunniraleigh/schoolR/master/pictures/output3.png?token=ALJUNZCWI2FX3OJ43ANW2BS55Z7X6)
 
 ## Authors
 Natalia Iannucci, Isabel Gomez, Sunni Raleigh
