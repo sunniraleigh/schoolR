@@ -51,7 +51,7 @@ square(2:3)
 
 ### Draw a circle with `circle`
 
-`circle` allows the user to input a desired radius length to produce the respective circle visualization along with calculations of its diameter, perimeter, and area.
+`circle` allows the user to input a desired radius length which returns the respective circle visualization along with calculations of its diameter, perimeter, and area.
 ```{r}
 circle(3)
 ```
@@ -65,7 +65,7 @@ circle(2:6)
 ```
 
 
-### Draw a polygon with 
+### Draw a polygon with `ngon`
 
 ## Graphing with `graph_my_data`
 `graph_my_data` allows students and teachers to produce high-quality graphs of data that they obtain, or of data from `data.frame`s. It outputs basic simple linear regression diagnostics such as r, means, and medians, and interprets the r value. 
