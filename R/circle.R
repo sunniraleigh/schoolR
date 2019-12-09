@@ -30,18 +30,19 @@ circle <- function(r){
           area = pi*(r)^2
         )
 
-      #reverse dataframe for plotting circles
+      # reverse dataframe for plotting circles
+      # plots largest circle first
       df1 <- df[order(-r),]
 
-      #make circles
+      # make circles
       plot <- ggplot() +
         geom_circle(aes(x0 = 0, y0 = 0, r = r, fill = r), data = df1) +
         coord_fixed() +
         geom_hline(yintercept = 0) +
         geom_vline(xintercept = 0) +
-        geom_point(data = df1, aes(x = r, y = 0, color = "red")) + #points corresponding to the radius
+        geom_point(data = df1, aes(x = r, y = 0, color = "red")) + # points corresponding to the radius
         geom_label(data = df1, aes(x = r - .5, y = .5, label = paste("r =", r))) +
-        guides(fill = guide_legend("Radius"), color = FALSE) + #deletes legend created by color
+        guides(fill = guide_legend("Radius"), color = FALSE) + # deletes legend created by color
         labs(title = "Area of circle(s)")
 
       #print dataframe
