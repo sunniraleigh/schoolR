@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 library(schoolR)
 ```
 
-Coding is being introduced to students at younger and younger ages. With the schoolR package, teachers and students can use coding as a tool to help learn and teach mathematical concepts. 
+Coding is being introduced to students at younger and younger ages. With the schoolR package, teachers and students can use coding, specifically in R, as a tool to help learn and teach mathematical concepts. 
 
 SchoolR helps teachers:
 
@@ -41,6 +41,31 @@ SchoolR helps students:
 This document provides an introduction to schoolR's functions with examples to show teachers how to use them while teaching to improve their student's learning and comprehension of mathematical concepts. It includes different examples and applications for different age/skill levels.
 
 ## Drawing Shapes
+
+### Drawing squares with `square` 
+
+`square` allows students to input a desired side length and produces the respective square visualization along with accurate calculations for the perimeter and area of the square. Students and/or teachers can also specify a vector of square lengths. 
+```{r}
+square(2:3)
+```
+
+### Draw a circle with `circle`
+
+`circle` allows the user to input a desired radius length to produce the respective circle visualization along with calculations of its diameter, perimeter, and area.
+```{r}
+circle(3)
+```
+
+The user can also specify a vector containing more than one radius length.
+```{r}
+lengths <- c(4,7,9)
+circle(lengths)
+
+circle(2:6)
+```
+
+
+### Draw a polygon with 
 
 ## Graphing with `graph_my_data`
 `graph_my_data` allows students and teachers to produce high-quality graphs of data that they obtain, or of data from `data.frame`s. It outputs basic simple linear regression diagnostics such as r, means, and medians, and interprets the r value. 
@@ -70,12 +95,5 @@ generate_problems("add", 1, 10, 5)
 For older students such as those in middle school who are pracitcing multiplication tables, a teacher can easily produce more advanced multiplication problems:
 ```{r}
 generate_problems("multiply", 5, 15, 10)
-```
-
-##Drawing squares with `square` 
-
-`square` allows students to input a desired side length and produces the respective square visualization along with accurate calculations for the perimeter and area of the square. Students and/or teachers can also specify a vector of square lengths. 
-```{r}
-square(2:3)
 ```
 
