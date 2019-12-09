@@ -23,12 +23,26 @@ library(schoolR)
 ### Drawing squares with `square` 
 
 ### Draw a circle with `circle`
+`circle` allows the user to input a desired radius length which returns the respective circle visualization along with calculations of its diameter, perimeter, and area.
+```{r}
+# input a single value
+circle(3)
+
+# input a vector
+circle(2:5)
+
+# input a pre-defined vector
+r <- c(4,7,9)
+circle(r)
+```
+
+![circle_output](https://docs.google.com/drawings/d/e/2PACX-1vRNkT32DDHY3xg3jpJMK5k_-KhrrnsbMx2K7XiYpMdcrl5OyfZE6wmUBujq1fw92TG_eHRbuFrqlBip/pub?w=977&h=279)
 
 ### Draw a polygon with `ngon`
 
 ### Graphing with `graph_my_data`
 `graph_my_data` allows students and teachers to produce high-quality graphs of data that they obtain, or of data from `data.frame`s. It outputs basic simple linear regression diagnostics such as correlation coefficients, means, and medians, and interprets the r value. This allows for a deeper understanding of general trends in data for students who likely have very little statistical background.
-```
+```{r}
 x <- c(1, 3, 4, 6, 2)
 y <- c(2, 7, 7, 11, 4)
 graph_my_data(x, y, "blue", "number of students called in sick", "total number of absences", "kids out of school on a certain day")

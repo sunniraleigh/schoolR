@@ -51,12 +51,12 @@ square(2:3)
 
 ### Draw a circle with `circle`
 
-`circle` allows the user to input a desired radius length which returns the respective circle visualization along with calculations of its diameter, perimeter, and area.
+`circle` allows the user to input a desired radius length which returns the respective circle visualization along with calculations of its diameter, perimeter, and area. The visualization is in form of a graph and the geometrical calculations are print in a data frame.
 ```{r}
 circle(3)
 ```
 
-The user can also specify a vector containing more than one radius length.
+The user can also specify a vector containing more than one radius length. When there are multiple radius lengths inputted, the function will graph each respective circle layered over one another.
 ```{r}
 lengths <- c(4,7,9)
 circle(lengths)
