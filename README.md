@@ -58,7 +58,7 @@ circle(r)
 ``` {r}
 ngon(3,5)
 ```
-![ngon_output](https://drive.google.com/file/d/1iXvQqVKUPy00H8wU9NL-USfubiivmhw0/view)
+![ngon_output](https://docs.google.com/document/d/1bo3uGTZQScYJ_2-7HUblFAF6AoD0OHy6O3EIIgCcCPE/edit?usp=sharing)
 
 
 ### Draw an n-gon with `draw_ngon()`
@@ -67,7 +67,7 @@ ngon(3,5)
 ```{r}
 ngon(3,5) %>% draw_ngon()
 ```
-![draw_ngon](https://drive.google.com/file/d/1VwxxW5Y34XXutr4hmWoVXlWFjhImoxi3/view)
+![draw_ngon](https://docs.google.com/document/d/e/2PACX-1vQVvceyQ_CC7EHeb3yLM3Z0FQLt7NlYJ86nDe_546mC-4QkLICsorDOS_LkPNEdLRxLEcg48NKJ0ZZ_/pub)
 
 ### Graphing with `graph_my_data()`
 `graph_my_data` allows students and teachers to produce high-quality graphs of data that they obtain, or of data from `data.frame`s. It outputs basic simple linear regression diagnostics such as correlation coefficients, means, and medians, and interprets the r value. This allows for a deeper understanding of general trends in data for students who likely have very little statistical background.
