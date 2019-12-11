@@ -1,7 +1,7 @@
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental) [![CRAN status](https://www.r-pkg.org/badges/version/wetry)](https://CRAN.R-project.org/package=wetry)
 [![Travis build status](https://travis-ci.org/sunniraleigh/schoolR.svg?branch=master)](https://travis-ci.org/sunniraleigh/schoolR)
 
-# schoolR
+# schoolR <img src='hex_design.png' align="right" height="139" /></a>
 
 An R package that provides a simple and accessible approach for elementary through high school students and their educators to engage in R and solidify their understanding of mathematical concepts. 
 
