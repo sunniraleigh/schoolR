@@ -1,3 +1,4 @@
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental) [![CRAN status](https://www.r-pkg.org/badges/version/wetry)](https://CRAN.R-project.org/package=wetry)
 [![Travis build status](https://travis-ci.org/sunniraleigh/schoolR.svg?branch=master)](https://travis-ci.org/sunniraleigh/schoolR)
 
 # schoolR
@@ -51,6 +52,7 @@ circle(2:5)
 r <- c(4,7,9)
 circle(r)
 ```
+![circle_output1](https://docs.google.com/drawings/d/e/2PACX-1vTR0yrWsmo5WfOmw4z1MnF3SlXoph4c2wXi6a3vXhSP7xnhUTjM29bUmGqieEb9QPlfQIu_OQS8XY29/pub?w=460&h=455)
 
 ![circle_output](https://docs.google.com/drawings/d/e/2PACX-1vRNkT32DDHY3xg3jpJMK5k_-KhrrnsbMx2K7XiYpMdcrl5OyfZE6wmUBujq1fw92TG_eHRbuFrqlBip/pub?w=4500&h=1500)
 
