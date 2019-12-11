@@ -30,7 +30,7 @@ square(3)
 # input a vector
 square(3:6)
 ```
-![square_single](https://drive.google.com/file/d/1Byb2MshUoCXhMncr0vaHCFLzP6KRpFB9/view?usp=sharing)
+![square_single](https://docs.google.com/document/d/e/2PACX-1vRKal1TgAa8xutv_qcxZhG6d6VdtWoQL2BP-iSXjk5xidhJD1IEVDR2Oh0PWf3CQXm9QvjfmTz07wNv/pub)
 
 ![square_tibble](https://drive.google.com/file/d/1eNsn10fQzbSskd2qCj-WSfGn16IIPGCh/view?usp=sharing)
 
@@ -58,7 +58,7 @@ circle(r)
 ``` {r}
 ngon(3,5)
 ```
-![ngon_output](https://drive.google.com/file/d/1iXvQqVKUPy00H8wU9NL-USfubiivmhw0/view?usp=sharing)
+![ngon_output](https://drive.google.com/file/d/1iXvQqVKUPy00H8wU9NL-USfubiivmhw0/view)
 
 
 ### Draw an n-gon with `draw_ngon()`
@@ -67,7 +67,7 @@ ngon(3,5)
 ```{r}
 ngon(3,5) %>% draw_ngon()
 ```
-![draw_ngon](https://drive.google.com/file/d/1YbARIEGHAOB7FQGqq7j6qoF00xslj3gr/view?usp=sharing)
+![draw_ngon](https://drive.google.com/file/d/1VwxxW5Y34XXutr4hmWoVXlWFjhImoxi3/view)
 
 ### Graphing with `graph_my_data()`
 `graph_my_data` allows students and teachers to produce high-quality graphs of data that they obtain, or of data from `data.frame`s. It outputs basic simple linear regression diagnostics such as correlation coefficients, means, and medians, and interprets the r value. This allows for a deeper understanding of general trends in data for students who likely have very little statistical background.
