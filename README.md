@@ -30,13 +30,14 @@ square(3)
 # input a vector
 square(3:6)
 ```
-![square_single](https://docs.google.com/document/d/e/2PACX-1vRKal1TgAa8xutv_qcxZhG6d6VdtWoQL2BP-iSXjk5xidhJD1IEVDR2Oh0PWf3CQXm9QvjfmTz07wNv/pub)
+![square_single](https://docs.google.com/drawings/d/e/2PACX-1vQxR4wwQgkgzotviGyCOL7HhELx_1myjNA-Mr4uBkdjkCy76p2OsLhe_DPBQSL-vlqEuffDB_NYAWKX/pub?w=454&h=233)
 
-![square_tibble](https://drive.google.com/file/d/1eNsn10fQzbSskd2qCj-WSfGn16IIPGCh/view?usp=sharing)
+![square_tibble](https://docs.google.com/drawings/d/e/2PACX-1vRiyGRKENp6Lks_tQGDj1PLegphMydc1pIUKXiOh9f-wzigjadRjcM3BPMr08SfCd4ncdCvUlldnkIV/pub?w=447&h=185)
 
-![square_vector](https://drive.google.com/file/d/1qVLNLQLWScjwr5I_OQl4kIyxf4GkZQtf/view?usp=sharing)
+![square_vector](https://docs.google.com/drawings/d/e/2PACX-1vSR8jqhEyv_o2rrrysPzj12gY1wie5ICdUl9RxeF369Liig3tr8op0GMESdyiL20ldYDNTJOZdhaO7W/pub?w=558&h=241)
 
-![square_long](https://drive.google.com/file/d/1FptEBfuuGlvNppO4qErlrFA_q-8peiWe/view?usp=sharing)
+![square_long](https://docs.google.com/drawings/d/e/2PACX-1vSgSU8VKbG4yVdQlmSLmRrutkapArm0CT5DL1sXUf50mKetPftuflZLUx6dladpv2zSltePmuOgI4lT/pub?w=475&h=216)
+
 ### Draw a circle with `circle()`
 `circle` allows the user to input a desired radius length which returns the respective circle visualization along with calculations of its diameter, perimeter, and area.
 ```{r}
@@ -58,7 +59,7 @@ circle(r)
 ``` {r}
 ngon(3,5)
 ```
-![ngon_output](https://docs.google.com/drawings/d/e/2PACX-1vQ76AC7vEhnGx4cRBWhH0OVkJRCem9MWqE23UX2Uk7TyRr58yvhNBHCWMFBNxspP5a6-Pi_KxEUHq5i/pub?w=960&h=720)
+![ngon_output](https://docs.google.com/drawings/d/e/2PACX-1vQ76AC7vEhnGx4cRBWhH0OVkJRCem9MWqE23UX2Uk7TyRr58yvhNBHCWMFBNxspP5a6-Pi_KxEUHq5i/pub?w=460&h=141)
 
 
 ### Draw an n-gon with `draw_ngon()`
@@ -67,7 +68,7 @@ ngon(3,5)
 ```{r}
 ngon(3,5) %>% draw_ngon()
 ```
-![draw_ngon](https://docs.google.com/document/d/e/2PACX-1vQVvceyQ_CC7EHeb3yLM3Z0FQLt7NlYJ86nDe_546mC-4QkLICsorDOS_LkPNEdLRxLEcg48NKJ0ZZ_/pub)
+![draw_ngon](https://docs.google.com/drawings/d/e/2PACX-1vT6LJidgeYK6J8tCgy2Wdm5FXxK8toE9f2PB8o2-ltgpLwNexkf0WNAcc3xk_4rDmyGSbm3RMwgZ3bK/pub?w=456&h=244)
 
 ### Graphing with `graph_my_data()`
 `graph_my_data` allows students and teachers to produce high-quality graphs of data that they obtain, or of data from `data.frame`s. It outputs basic simple linear regression diagnostics such as correlation coefficients, means, and medians, and interprets the r value. This allows for a deeper understanding of general trends in data for students who likely have very little statistical background.
