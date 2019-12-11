@@ -58,7 +58,7 @@ circle(r)
 ``` {r}
 ngon(3,5)
 ```
-![ngon_output](https://docs.google.com/document/d/1bo3uGTZQScYJ_2-7HUblFAF6AoD0OHy6O3EIIgCcCPE/edit?usp=sharing)
+![ngon_output](https://docs.google.com/drawings/d/e/2PACX-1vQ76AC7vEhnGx4cRBWhH0OVkJRCem9MWqE23UX2Uk7TyRr58yvhNBHCWMFBNxspP5a6-Pi_KxEUHq5i/pub?w=960&h=720)
 
 
 ### Draw an n-gon with `draw_ngon()`
