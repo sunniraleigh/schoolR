@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(schoolR)
+library(dplyr)
 ```
 
 Coding is being introduced to students at younger and younger ages. With the schoolR package, teachers and students can use coding, specifically in R, as a tool to help learn and teach mathematical concepts. 
@@ -65,7 +66,19 @@ circle(2:6)
 ```
 
 
-### Draw a polygon with `ngon`
+### Calculate area and perimeter of an n-gon with `ngon` 
+In order to draw an ngon, there are two seperate functions that need to be called. First, a user can use the `ngon` function by inputting a given length of radius and the number of sides for the shape. `ngon` creates and returns a tibble that contains the calculated area, perimeter, radius, angle and number of sides. 
+```{r}
+ngon(2,3)
+ngon(2:5,3)
+```
+
+###Drawing an n-gon with `draw_ngon` 
+The user can pipe the function `draw_ngon` to the function `ngong` to visualize the respective polygon. The `draw_ngon` function takes in as an argument the output of `ngon`, a tibble. 
+```{r}
+ngon(2,3) %>%
+  draw_ngon()
+```
 
 ## Graphing with `graph_my_data`
 `graph_my_data` allows students and teachers to produce high-quality graphs of data that they obtain, or of data from `data.frame`s. It outputs basic simple linear regression diagnostics such as correlation coefficients, means, and medians, and interprets the r value. This allows for a deeper understanding of general trends in data for students who likely have very little statistical background. Teachers who are teaching students about mean and median can use example data sets and pre-existing `data.frame`s to help students understand how they are generated from data, and how outliers affect them differently. `graph_my_data` allows teachers to introduce students to the concept of trends in data, and how one variable can be correlated to another. By producing graphs as well as the Pearson correlation coefficient with its interpretation, `graph_my_data` lets students gain a more intuitive understanding of how to identify and interpret trends in data, thus providing younger students with an introduction to bivariate data analysis without getting tangled up in the details of computing or coding for this information.

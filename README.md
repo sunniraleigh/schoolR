@@ -18,13 +18,25 @@ This package also lets teachers produce practice problems, while specifying the 
 It will be used by teachers and students in collaboration. It will allow students to begin understanding more complex, big picture math concepts by using R without having to first learn all of the details of coding.
 ```
 library(schoolR)
+library(dplyr)
 ```
 
 ### Drawing squares with `square()`
+`square` allows the user to input a numeric vector that defines the length of each side of the square. The function will output a visualization of the square and a tibble with calculation of its length, width, area and perimeter
 ```{r}
+# input a single length 
+square(3)
 
+# input a vector
+square(3:6)
 ```
+![square_single](https://drive.google.com/file/d/1Byb2MshUoCXhMncr0vaHCFLzP6KRpFB9/view?usp=sharing)
 
+![square_tibble](https://drive.google.com/file/d/1eNsn10fQzbSskd2qCj-WSfGn16IIPGCh/view?usp=sharing)
+
+![square_vector](https://drive.google.com/file/d/1qVLNLQLWScjwr5I_OQl4kIyxf4GkZQtf/view?usp=sharing)
+
+![square_long](https://drive.google.com/file/d/1FptEBfuuGlvNppO4qErlrFA_q-8peiWe/view?usp=sharing)
 ### Draw a circle with `circle()`
 `circle` allows the user to input a desired radius length which returns the respective circle visualization along with calculations of its diameter, perimeter, and area.
 ```{r}
@@ -41,10 +53,21 @@ circle(r)
 
 ![circle_output](https://docs.google.com/drawings/d/e/2PACX-1vRNkT32DDHY3xg3jpJMK5k_-KhrrnsbMx2K7XiYpMdcrl5OyfZE6wmUBujq1fw92TG_eHRbuFrqlBip/pub?w=4500&h=1500)
 
-### Draw a polygon with `ngon()`
+### Create a tibble with `ngon()`
+`ngon` allows the user to specify the length of a radius and the number of sides of a shape. This function then produces a tibble that contains all of the calculations.
 ``` {r}
-
+ngon(3,5)
 ```
+![ngon_output](https://drive.google.com/file/d/1iXvQqVKUPy00H8wU9NL-USfubiivmhw0/view?usp=sharing)
+
+
+### Draw an n-gon with `draw_ngon()`
+`draw_ngon()` builds upon the `ngon` function by plotting the shape given the information for in `ngon`.
+
+```{r}
+ngon(3,5) %>% draw_ngon()
+```
+![draw_ngon](https://drive.google.com/file/d/1YbARIEGHAOB7FQGqq7j6qoF00xslj3gr/view?usp=sharing)
 
 ### Graphing with `graph_my_data()`
 `graph_my_data` allows students and teachers to produce high-quality graphs of data that they obtain, or of data from `data.frame`s. It outputs basic simple linear regression diagnostics such as correlation coefficients, means, and medians, and interprets the r value. This allows for a deeper understanding of general trends in data for students who likely have very little statistical background.

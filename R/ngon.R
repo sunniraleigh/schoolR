@@ -18,24 +18,10 @@ ngon <-  function(r, n){
     radius = r,
     sides = n,
     area = (r^2 * n * sin(angle)) / 2,
-    perimeter = (2*r*n)*sin(pi/n)
+    perimeter = (2*r*n)*sin(pi/n),
+    angle = angle
   )
-
-  # To find the coordinates
-  coords <- tibble::tibble(
-    side = 0:(n-1),
-    x = r * cos(side * angle),
-    y = r * sin(side * angle)
-  )
-
-  #To draw shape
-  shape <- ggplot() +
-    geom_polygon(
-      data = NULL, aes(x = coords$x, y = coords$y), colour = "black",
-      fill = coords$x ) +
-    labs( x = "x", y = "y")
-
-  return(shape)
-
+  return(math_ngon)
 }
-ngon(2,5)
+
+

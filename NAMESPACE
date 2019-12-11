@@ -3,6 +3,7 @@
 S3method(graph_my_data,data.frame)
 S3method(graph_my_data,numeric)
 export(circle)
+export(draw_ngon)
 export(generate_problems)
 export(graph_my_data)
 export(ngon)

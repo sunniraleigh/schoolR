@@ -21,23 +21,23 @@ square <- function(x) {
   coords <- tibble::tibble(
     x1 = 0,
     x2 = 0 + x,
-    y1 = 0 + x,
-    y2 = x2 + x
+    y1 = 0,
+    y2 = x
   )
 
   #To draw square
-  ggplot() +
+  shape <- ggplot() +
     geom_rect(
       data = coords, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2), colour = "black", fill = x, alpha = 0.5,
     ) +
-    geom_text(data = coords, aes(x = 0, y = y1 + 0.2, label = "area:"), size = 3) +
-    geom_text(data = coords, aes(x = x2/2, y = y1 + 0.2, label = math$area), size = 3) +
-    geom_text(data = coords, aes(x = 0, y = y1 + 0.4, label = "perimeter:"), size = 3) +
-    geom_text(data = coords, aes(x = x2/2, y = y1 + 0.4, label = math$area), size = 3) +
     scale_x_continuous(name = "width") +
-    scale_y_continuous(name = "length")
+    scale_y_continuous(name = "length") +
+    coord_equal()
 
   #Print table
-  return(math)
+  print(math)
+
+  #Call Shape
+  shape
 
 }
