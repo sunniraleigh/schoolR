@@ -62,7 +62,7 @@ ngon(3,5)
 ![ngon_output](https://docs.google.com/drawings/d/e/2PACX-1vQ76AC7vEhnGx4cRBWhH0OVkJRCem9MWqE23UX2Uk7TyRr58yvhNBHCWMFBNxspP5a6-Pi_KxEUHq5i/pub?w=460&h=141)
 
 
-### Draw an n-gon with `draw_ngon()`
+### Draw an polygon with `draw_ngon()`
 `draw_ngon()` builds upon the `ngon` function by plotting the shape given the information for in `ngon`.
 
 ```{r}
