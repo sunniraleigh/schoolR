@@ -8,6 +8,8 @@ An R package that provides a simple and accessible approach for elementary throu
 To install, run the following code: 
 ```
 devtools::install_github(https://github.com/sunniraleigh/schoolR) 
+
+library(schoolR)
 ```
 
 ## Getting Started
@@ -18,10 +20,6 @@ This package should be used in a classroom setting as a supplemental material fo
 It provides functions to help students develop a deeper understanding of how area is caclulated, and how to analyze trends in graphs.
 This package also lets teachers produce practice problems, while specifying the operation, number of problems to generate, and magnitude of numbers involved. 
 It will be used by teachers and students in collaboration. It will allow students to begin understanding more complex, big picture math concepts by using R without having to first learn all of the details of coding.
-```
-library(schoolR)
-library(dplyr)
-```
 
 ### Drawing squares with `square()`
 `square` allows the user to input a numeric vector that defines the length of each side of the square. The function will output a visualization of the square and a tibble with calculation of its length, width, area and perimeter
