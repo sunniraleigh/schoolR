@@ -13,12 +13,7 @@ Installation
 
 To install, run the following code:
 
-``` r
-devtools::install_github("sunniraleigh/schoolR") 
-#> Skipping install of 'schoolR' from a github remote, the SHA1 (bce27ba4) has not changed since last install.
-#>   Use `force = TRUE` to force installation
-library(schoolR)
-```
+    devtools::install_github("sunniraleigh/schoolR") 
 
 Getting Started
 ---------------
@@ -43,7 +38,7 @@ square(3)
 #> 1      3     3     9        12
 ```
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
 ``` r
 
@@ -58,7 +53,7 @@ square(3:6)
 #> 4      6     6    36        24
 ```
 
-<img src="man/figures/README-unnamed-chunk-4-2.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-3-2.png" width="100%" />
 
 ### Draw a circle with `circle()`
 
@@ -71,7 +66,7 @@ circle(3)
 #> 1 3        6  18.84956 28.27433
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
 
 ``` r
 # input a vector
@@ -83,7 +78,7 @@ circle(2:5)
 #> 4 5       10  31.41593 78.53982
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-2.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-4-2.png" width="100%" />
 
 ``` r
 # input a pre-defined vector
@@ -95,7 +90,7 @@ circle(r)
 #> 3 9       18  56.54867 254.46900
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-3.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-4-3.png" width="100%" />
 
 ### Create a tibble with `ngon()`
 
@@ -117,7 +112,7 @@ ngon(3,5)
 ngon(3,5) %>% draw_ngon()
 ```
 
-<img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
 
 ### Graphing with `graph_my_data()`
 
@@ -142,7 +137,7 @@ graph_my_data(x, y, "blue", "number of students called in sick", "total number o
 #> (Intercept)        7
 ```
 
-<img src="man/figures/README-unnamed-chunk-8-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
 
 ### Producing Practice Problems with `generate_problems()`
 
@@ -151,16 +146,16 @@ graph_my_data(x, y, "blue", "number of students called in sick", "total number o
 ``` r
 generate_problems("multiply", 5, 15, 10)
 #>    Problem Student.Answer Correct.Answer
-#> 1    5 * 6                            30
-#> 2   13 * 9                           117
-#> 3   9 * 11                            99
-#> 4   11 * 5                            55
-#> 5  12 * 12                           144
-#> 6   7 * 10                            70
-#> 7  10 * 14                           140
-#> 8   6 * 15                            90
-#> 9  15 * 13                           195
-#> 10   8 * 8                            64
+#> 1  10 * 13                           130
+#> 2    7 * 5                            35
+#> 3    5 * 6                            30
+#> 4  13 * 11                           143
+#> 5    9 * 9                            81
+#> 6  12 * 10                           120
+#> 7   14 * 8                           112
+#> 8   8 * 15                           120
+#> 9  11 * 12                           132
+#> 10  6 * 14                            84
 ```
 
 Authors

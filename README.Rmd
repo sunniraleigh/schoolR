@@ -23,12 +23,12 @@ An R package that provides a simple and accessible approach for elementary throu
 
 ## Installation
 To install, run the following code: 
-```{r}
+```
 devtools::install_github("sunniraleigh/schoolR") 
-library(schoolR)
 ```
 
 ```{r include=FALSE}
+library(schoolR)
 library(dplyr)
 ```
 
