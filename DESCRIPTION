@@ -39,6 +39,7 @@ Imports:
     ggforce,
     ggthemes,
     gridExtra,
+    patchwork,
     stats,
     tidyr,
     tibble

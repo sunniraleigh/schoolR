@@ -16,6 +16,7 @@ graph_my_data <- function(x, y, color, ind_var, dep_var, title, data){
 #' @rdname graph_my_data
 #' @import ggplot2
 #' @import ggthemes
+#' @import patchwork
 #' @importFrom stats coefficients cor lm median predict resid
 #' @import gridExtra
 graph_my_data.numeric <- function(x, y, color, ind_var, dep_var, title, data = NULL) {
@@ -114,10 +115,9 @@ graph_my_data.numeric <- function(x, y, color, ind_var, dep_var, title, data = N
     theme_economist() +
     stat_smooth(method = 'lm')
 
-  grid.arrange(arrangeGrob(scatterplot, res_plot, ncol = 2),
-               arrangeGrob(histogram, qqplot, ncol = 2),
-               final_plot,
-               nrow = 3)
+  (scatterplot | res_plot) /
+    (histogram | qqplot) /
+    (final_plot)
 
 }
 
@@ -233,9 +233,8 @@ graph_my_data.data.frame <- function(x = NULL, y = NULL, color, ind_var, dep_var
     theme_economist() +
     stat_smooth(method = 'lm')
 
-  grid.arrange(arrangeGrob(scatterplot, res_plot, ncol = 2),
-               arrangeGrob(histogram, qqplot, ncol = 2),
-               final_plot,
-               nrow = 3)
+  (scatterplot | res_plot) /
+    (histogram | qqplot) /
+    (final_plot)
 
 }
