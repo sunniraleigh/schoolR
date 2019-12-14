@@ -75,6 +75,9 @@ ngon(3,5) %>% map_ngon()
 
 ```{r}
 ngon(3,5) %>% map_ngon() %>% draw_ngon()
+
+#input a vector
+ngon(3:6,5) %>% map_ngon() %>% draw_ngon()
 ```
 
 ### Graphing with `graph_my_data()`
