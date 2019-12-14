@@ -65,16 +65,16 @@ circle(r)
 ```
 
 ### Create a tibble with `ngon()`
-`ngon` allows the user to specify the length of a radius and the number of sides of a shape. This function then produces a tibble that contains all of the calculations.
+`ngon` allows the user to specify the length of a radius and the number of sides of a shape. This function can then passed onto `map_ngon`, which then produces a tibble that contains all of the calculations.
 ```{r}
-ngon(3,5)
+ngon(3,5) %>% map_ngon()
 ```
 
 ### Draw an polygon with `draw_ngon()`
-`draw_ngon()` builds upon the `ngon` function by plotting the shape given the information for in `ngon`.
+`draw_ngon()` builds upon the `ngon` and the `map_ngon` function by plotting the shape given the information for in `ngon`.
 
 ```{r}
-ngon(3,5) %>% draw_ngon()
+ngon(3,5) %>% map_ngon() %>% draw_ngon()
 ```
 
 ### Graphing with `graph_my_data()`

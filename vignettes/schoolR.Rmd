@@ -29,7 +29,7 @@ SchoolR helps teachers:
   
   * explain how to interpret simple linear regression diagnostics
   
-  * generate large numbers of practice problems for students with the corect answers for students to check their work
+  * generate large numbers of practice problems for students with the correct answers for students to check their work
   
 SchoolR helps students:
   
@@ -67,7 +67,7 @@ circle(2:6)
 
 
 ### Calculate area and perimeter of an n-gon with `ngon` 
-In order to draw an ngon, there are three seperate functions that need to be called. First, a user can use the `ngon` function by inputting a given length of radius and the number of sides for the shape. `ngon` creates and returns a tibble that contains the calculated area, perimeter, radius, angle and number of sides. 
+In order to draw an ngon, there are three separate functions that need to be called. First, a user can use the `ngon` function by inputting a given length of radius and the number of sides for the shape. `ngon` creates and returns a tibble that contains the calculated area, perimeter, radius, angle and number of sides. 
 ```{r}
 ngon(2,3)
 ngon(2:5,3)
@@ -98,7 +98,7 @@ ngon(2:5,3) %>%
 ## Graphing with `graph_my_data`
 `graph_my_data` allows students and teachers to produce high-quality graphs of data that they obtain, or of data from `data.frame`s. It outputs basic simple linear regression diagnostics such as correlation coefficients, means, and medians, and interprets the r value. This allows for a deeper understanding of general trends in data for students who likely have very little statistical background. Teachers who are teaching students about mean and median can use example data sets and pre-existing `data.frame`s to help students understand how they are generated from data, and how outliers affect them differently. `graph_my_data` allows teachers to introduce students to the concept of trends in data, and how one variable can be correlated to another. By producing graphs as well as the Pearson correlation coefficient with its interpretation, `graph_my_data` lets students gain a more intuitive understanding of how to identify and interpret trends in data, thus providing younger students with an introduction to bivariate data analysis without getting tangled up in the details of computing or coding for this information.
 
-### for younger students: elemtary to middle school 
+### for younger students: elementary to middle school 
 For younger students, teachers and/or students can create simple vectors of data, creating a vector `x` of points to plot on the x-axis and a vector `y` of points to plot on the y-axis. 
 For example, teachers can provide students with very basic data sets, such as a set of 5 points with x-coordinates being the number of students called in sick by their parents and y-coordinates being the total number of students absent at school for each day.`graph_my_data` will automatically graph their points, allowing them to understand how graphing and relationships between variables work. Teachers will then be able to show students how when more students are called in sick, more students are absent overall. This allows them to introduce younger students to the basic concepts surrounding correlation and causation. Additionally, it introduces young students how to graph data, providing them with examples of what accurate graphs of data that they can input via vectors should look like.
 ```{r}
@@ -109,14 +109,14 @@ graph_my_data(x, y, "blue", "number of students called in sick", "total number o
 
 ### for older students: middle to high school
 For older students, they could use the previous technique of creating vectors for data that they might be actually collecting, as students in middle school may be performing small science experiments and collecting data, and use `graph_my_data` to understand what their data actually means. 
-For example, students in a middle school science class may be doing an experiment to see what the optimal amount of daioly watering is for a pea plant. They can enter the collected data for each variable in as a vector `x` for the ml of water for each point, and a vector `y` corresponding to the measured height of the plants. They can then use `graph_my_data` to see the results of their experiment graphed. 
+For example, students in a middle school science class may be doing an experiment to see what the optimal amount of daily watering is for a pea plant. They can enter the collected data for each variable in as a vector `x` for the ml of water for each point, and a vector `y` corresponding to the measured height of the plants. They can then use `graph_my_data` to see the results of their experiment graphed. 
 ```{r}
 x <- c(0.5, 1, 2, 3, 5, 10)
 y <- c(2, 3, 3.5, 6, 4, 2)
 graph_my_data(x, y, "purple", "ml of water", "height of plant (cm)", "plant height vs amount of water given to plant daily")
 ```
 
-Older students could also use `data.frame`s to be able to use larger sets of data and try looking at relationships between different variables to understand and interpret trends. Teachers can begin introducing students to concepts of identifying correlation and causation. This function will automatically graph the data that the student is looking at, as well as interpret the trend in the data, with the goal being that students will eventually be able to look at and interpret trends in data on their own. This can also serve as an introduction to teaching students the basics of how `data.frame`s are structered in R.
+Older students could also use `data.frame`s to be able to use larger sets of data and try looking at relationships between different variables to understand and interpret trends. Teachers can begin introducing students to concepts of identifying correlation and causation. This function will automatically graph the data that the student is looking at, as well as interpret the trend in the data, with the goal being that students will eventually be able to look at and interpret trends in data on their own. This can also serve as an introduction to teaching students the basics of how `data.frame`s are structured in R.
 For example, a student could graph `mgp` against `disp` from the `mtcars` data set to see what the information in this data set is like.
 ```{r}
 graph_my_data(data = mtcars, color = "blue", ind_var = "mpg", dep_var = "disp", title = "mtcars data")$r_df
@@ -134,7 +134,7 @@ generate_problems("add", 1, 10, 5)
 ```
 
 ### older students
-For older students such as those in middle school who are pracitcing multiplication tables, a teacher can easily produce more advanced multiplication problems:
+For older students such as those in middle school who are practicing multiplication tables, a teacher can easily produce more advanced multiplication problems:
 ```{r}
 generate_problems("multiply", 5, 15, 10)
 ```
