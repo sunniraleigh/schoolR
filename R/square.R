@@ -14,7 +14,7 @@ square <- function(x) {
     length = x,
     width = x,
     area = x^2,
-    perimeter = 4*x
+    perimeter = 4 * x
   )
 
   # To find the coordinates
@@ -28,16 +28,18 @@ square <- function(x) {
   #To draw square
   shape <- ggplot() +
     geom_rect(
-      data = coords, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2), colour = "black", fill = x, alpha = 0.5,
+      data = coords, aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2,
+                         col = math$perimeter, fill = math$area),
+      alpha = 0.5
     ) +
-    scale_x_continuous(name = "width") +
-    scale_y_continuous(name = "length") +
+    labs(title = "Square Plot", x = "Width", y = "Length", col = "Perimeter",
+         fill = "Area") +
     coord_equal()
+
 
   #Print table
   print(math)
 
   #Call Shape
   shape
-
 }

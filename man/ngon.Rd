@@ -2,7 +2,7 @@
 % Please edit documentation in R/ngon.R
 \name{ngon}
 \alias{ngon}
-\title{graphs and calculates the area and perimeter of a square}
+\title{creates a tibble with the an entry for the radis and number of sides}
 \usage{
 ngon(r, n)
 }
@@ -12,11 +12,10 @@ ngon(r, n)
 \item{n}{a numeric input containing a positive integer}
 }
 \value{
-a dataframe containining the radius, number of sides, area, perimeter,
-and a graph of the n-gon with radius \code{r} and sides \code{s}
+a dataframe containining the radius \code{r}, number of side \code{n}
 }
 \description{
-graphs and calculates the area and perimeter of a square
+creates a tibble with the an entry for the radis and number of sides
 }
 \examples{
 ngon(3,4)

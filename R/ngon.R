@@ -1,27 +1,17 @@
-#' graphs and calculates the area and perimeter of a square
+#' creates a tibble with the an entry for the radis and number of sides
 #' @param r a numeric input containing a positive integer
 #' @param n a numeric input containing a positive integer
-#' @return a dataframe containining the radius, number of sides, area, perimeter,
-#' and a graph of the n-gon with radius \code{r} and sides \code{s}
+#' @return a dataframe containining the radius \code{r}, number of side \code{n}
 #' @examples
 #' ngon(3,4)
 #' ngon (102,40)
-#' @import ggplot2
 #' @import tibble
 #' @export
-ngon <-  function(r, n){
-  # To find the angle between each point
-  angle <- 2 * pi / n
-
+ngon <-  function(r, n) {
   # tibble containing all the information
   math_ngon <- tibble::tibble(
     radius = r,
-    sides = n,
-    area = (r^2 * n * sin(angle)) / 2,
-    perimeter = (2*r*n)*sin(pi/n),
-    angle = angle
+    sides = n
   )
   return(math_ngon)
 }
-
-

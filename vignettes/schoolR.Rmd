@@ -67,16 +67,31 @@ circle(2:6)
 
 
 ### Calculate area and perimeter of an n-gon with `ngon` 
-In order to draw an ngon, there are two seperate functions that need to be called. First, a user can use the `ngon` function by inputting a given length of radius and the number of sides for the shape. `ngon` creates and returns a tibble that contains the calculated area, perimeter, radius, angle and number of sides. 
+In order to draw an ngon, there are three seperate functions that need to be called. First, a user can use the `ngon` function by inputting a given length of radius and the number of sides for the shape. `ngon` creates and returns a tibble that contains the calculated area, perimeter, radius, angle and number of sides. 
 ```{r}
 ngon(2,3)
 ngon(2:5,3)
 ```
 
+
+###Calculating coordinates
+The user can call `map_ngon` after calling `ngon` in order to map the vector radius \code{r} and number of sides \code{n} to the function `coords_ngon`. `map_ngon` maps each unique value of radius or number of side to the function `coords_ngon` -- which, simply creates a tibble containing the coordinate information, area and perimeter of each of the different polygons specified in the vector radius \code{r} and number of sides \code{n}
+```{r calculating the coordinates}
+ngon(2,3) %>%
+  map_ngon()
+
+ngon(2:5,3) %>%
+  map_ngon()
+```
 ###Drawing an n-gon with `draw_ngon` 
-The user can pipe the function `draw_ngon` to the function `ngong` to visualize the respective polygon. The `draw_ngon` function takes in as an argument the output of `ngon`, a tibble. 
+The user can pipe the function `draw_ngon` to the function `ngon` to visualize the respective polygon. The `draw_ngon` function takes in as an argument the output of `map_ngon`, a tibble created based off the arguments passed to `ngon`. 
 ```{r}
 ngon(2,3) %>%
+  map_ngon() %>%
+  draw_ngon()
+
+ngon(2:5,3) %>%
+  map_ngon() %>%
   draw_ngon()
 ```
 

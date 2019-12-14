@@ -2,19 +2,20 @@
 % Please edit documentation in R/draw_ngon.R
 \name{draw_ngon}
 \alias{draw_ngon}
-\title{graphs and calculates the area and perimeter of a square}
+\title{graphs  the area and perimeter of an n-gon}
 \usage{
-draw_ngon(ngon)
+draw_ngon(ngon_coord2)
 }
 \arguments{
-\item{ngon}{a tibble output from the function ngon}
+\item{ngon_coord2}{a tibble output from the function map_ngon}
 }
 \value{
-a ggplot with the plot of the n-gon shape with radius \code{r} as defined in ngon
+a ggplot with the plot of the n-gon shape with radius \code{r}
+as defined in ngon
 }
 \description{
-graphs and calculates the area and perimeter of a square
+graphs  the area and perimeter of an n-gon
 }
 \examples{
-draw_ngon(ngon(2,4))
+draw_ngon(map_ngon(ngon(2,4)))
 }
