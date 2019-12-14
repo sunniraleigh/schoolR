@@ -24,3 +24,4 @@ draw_ngon <- function(ngon_coord2) {
          col = "Perimeter") +
     theme_minimal()
 }
+

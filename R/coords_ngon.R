@@ -20,6 +20,7 @@ coords_ngon <-  function(r, n) {
   coords <- tibble::tibble(
     side = 0:(n - 1),
     n = n,
+    radius = r,
     x = r * cos(side * angle),
     y = r * sin(side * angle),
     perimeter = (2 * r * n) * sin(pi / n),
@@ -29,3 +30,4 @@ coords_ngon <-  function(r, n) {
 
   return(coords)
 }
+
