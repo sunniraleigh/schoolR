@@ -10,18 +10,19 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  fig.width = 6
 )
 ```
 
-```{r setup}
+```{r setup, message=FALSE}
 library(schoolR)
 library(dplyr)
 ```
 
-Coding is being introduced to students at younger and younger ages. With the schoolR package, teachers and students can use coding, specifically in R, as a tool to help learn and teach mathematical concepts. 
+Coding is being introduced to students at younger and younger ages. With the **schoolR** package, teachers and students can use coding, specifically in R, as a tool to help learn and teach mathematical concepts. 
 
-SchoolR helps teachers:
+**SchoolR** helps teachers:
 
   * visually explain shapes and areas to younger children
   
@@ -31,7 +32,7 @@ SchoolR helps teachers:
   
   * generate large numbers of practice problems for students with the correct answers for students to check their work
   
-SchoolR helps students:
+**SchoolR** helps students:
   
   * see how different shapes create different areas
   
@@ -39,7 +40,7 @@ SchoolR helps students:
   
   * practice their math skills
   
-This document provides an introduction to schoolR's functions with examples to show teachers how to use them while teaching to improve their student's learning and comprehension of mathematical concepts. It includes different examples and applications for different age/skill levels.
+This document provides an introduction to **schoolR**'s functions with examples to show teachers how to use them while teaching to improve their student's learning and comprehension of mathematical concepts. It includes different examples and applications for different age/skill levels.
 
 ## Drawing Shapes
 
@@ -67,6 +68,7 @@ circle(2:6)
 
 
 ### Calculate area and perimeter of an n-gon with `ngon` 
+
 In order to draw an ngon, there are three separate functions that need to be called. First, a user can use the `ngon` function by inputting a given length of radius and the number of sides for the shape. `ngon` creates and returns a tibble that contains the calculated area, perimeter, radius, angle and number of sides. 
 ```{r}
 ngon(2,3)
@@ -74,7 +76,8 @@ ngon(2:5,3)
 ```
 
 
-###Calculating coordinates
+### Calculating coordinates
+
 The user can call `map_ngon` after calling `ngon` in order to map the vector radius \code{r} and number of sides \code{n} to the function `coords_ngon`. `map_ngon` maps each unique value of radius or number of side to the function `coords_ngon` -- which, simply creates a tibble containing the coordinate information, area and perimeter of each of the different polygons specified in the vector radius \code{r} and number of sides \code{n}
 ```{r calculating the coordinates}
 ngon(2,3) %>%
@@ -83,7 +86,9 @@ ngon(2,3) %>%
 ngon(2:5,3) %>%
   map_ngon()
 ```
-###Drawing an n-gon with `draw_ngon` 
+
+### Drawing an n-gon with `draw_ngon` 
+
 The user can pipe the function `draw_ngon` to the function `ngon` to visualize the respective polygon. The `draw_ngon` function takes in as an argument the output of `map_ngon`, a tibble created based off the arguments passed to `ngon`. 
 ```{r}
 ngon(2,3) %>%
@@ -96,6 +101,7 @@ ngon(2:5,3) %>%
 ```
 
 ## Graphing with `graph_my_data`
+
 `graph_my_data` allows students and teachers to produce high-quality graphs of data that they obtain, or of data from `data.frame`s. It outputs basic simple linear regression diagnostics such as correlation coefficients, means, and medians, and interprets the r value. This allows for a deeper understanding of general trends in data for students who likely have very little statistical background. Teachers who are teaching students about mean and median can use example data sets and pre-existing `data.frame`s to help students understand how they are generated from data, and how outliers affect them differently. `graph_my_data` allows teachers to introduce students to the concept of trends in data, and how one variable can be correlated to another. By producing graphs as well as the Pearson correlation coefficient with its interpretation, `graph_my_data` lets students gain a more intuitive understanding of how to identify and interpret trends in data, thus providing younger students with an introduction to bivariate data analysis without getting tangled up in the details of computing or coding for this information.
 
 ### for younger students: elementary to middle school 
